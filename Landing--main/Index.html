@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelatihan HTML - Landing Page Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header style="width: 100%; overflow: hidden;">
+        <img src="A_2D_digital_vector_illustration_serves_as_the_hea.png" alt="Header Image" style="width: 100%; max-height: 400px; height: auto; display: block; object-fit: cover;">
+</header>
+
+    
+    <!-- Tombol Mode Gelap -->
+    <div style="text-align:right; padding:10px;">
+        <button onclick="toggleDarkMode()" class="btn-cta" style="padding: 5px 10px; font-size: 14px;">🌓 Mode</button>
+    </div>
+
+    <!-- Navigasi -->
+
+    <nav style="background-color: #333; padding: 10px;">
+        <a href="#home" style="color: white; margin: 0 10px; text-decoration: none;">Beranda</a>
+        <a href="#about" style="color: white; margin: 0 10px; text-decoration: none;">Tentang</a>
+        <a href="#services" style="color: white; margin: 0 10px; text-decoration: none;">Layanan</a>
+        <a href="#contact" style="color: white; margin: 0 10px; text-decoration: none;">Kontak</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" data-aos="fade-up" style="text-align: center; padding: 50px 20px; background-color: #f0f0f0;">
+        <h2>Selamat Datang di Pelatihan Kami</h2>
+        <p>Mari belajar membuat website sederhana dengan HTML dasar</p>
+        <button class="btn-cta">Mulai Belajar</button>
+    </section>
+
+    <!-- Tentang -->
+    <section id="about" data-aos="fade-up" style="padding: 30px 20px; text-align: center;">
+        <h2>Tentang Kami</h2>
+        <p>Kami adalah penyedia pelatihan pemrograman web untuk pemula yang ingin memulai karir di bidang teknologi.</p>
+        
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <div style="margin: 0 15px;">
+                <h3>Mudah Dipahami</h3>
+                <p>Materi disampaikan dengan bahasa yang sederhana</p>
+            </div>
+            <div style="margin: 0 15px;">
+                <h3>Praktik Langsung</h3>
+                <p>Belajar sambil langsung mempraktikkan kode</p>
+            </div>
+            <div style="margin: 0 15px;">
+                <h3>Gratis</h3>
+                <p>Tidak ada biaya untuk pelatihan dasar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan -->
+    <section id="services" data-aos="fade-up" style="background-color: #f0f0f0; padding: 30px 20px; text-align: center;">
+        <h2>Layanan Kami</h2>
+        
+        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+            <div class="card">
+                <h3>HTML Dasar</h3>
+                <p>Belajar struktur dasar HTML</p>
+            </div>
+            <div class="card">
+                <h3>Form html</h3>
+                <p>Membuat form interaktif</p>
+            </div>
+            <div class="card">
+                <h3>Tabel HTML</h3>
+                <p>Mengatur data dalam tabel</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section style="padding: 30px 20px; text-align: center;" data-aos="fade-up">
+        <h2>Apa Kata Peserta</h2>
+        
+        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+            <div style="margin: 10px; padding: 20px; border: 1px solid #0f0e0e; width: 190px;">
+                <img src="burhan.png" alt="burhan" width="100%" height="auto">
+                <p>"Pelatihannya sangat mudah dipahami untuk pemula seperti saya."</p>
+                <p><strong>- Burhan, Mahasiswa</strong></p>
+            </div>
+            <div style="margin: 10px; padding: 20px; border: 1px solid #0f0e0e; width: 190px;">
+                <img src="alif.jpeg" alt="pak alif" width="100%" height="auto">
+                <p>"Materinya praktis dan langsung bisa diaplikasikan."</p>
+                <p><strong>- ALIF CATUR MURTIS.KOM.M.KOM, dosen</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    
+<section id="contact" data-aos="fade-up" style="background-color: #2d6a4f; color: white; padding: 30px 20px; text-align: center;">
+    <h2>Hubungi Kami</h2>
+    <form action="mailto:cerolinestudio@gmail.com" method="POST" enctype="text/plain" style="max-width: 400px; margin: auto;">
+        <input type="text" name="nama" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin: 10px 0;">
+        <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 10px; margin: 10px 0;">
+        <textarea name="pesan" placeholder="Tulis pesan..." required style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
+        <button type="submit" class="btn-cta">Kirim Pesan</button>
+    </form>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ceroline Studio. Semua Hak Dilindungi.</p>
+        <p>✨ Dibangun dengan semangat, diperhalus dengan cinta, dan didedikasikan untukmu. 💖🚀</p>
+        <div class="footer-icons">
+            <a href="https://instagram.com/syaizmi" target="_blank">📷</a>
+        </div>
+    </footer>
+
+    <!-- Tombol WhatsApp -->
+    <a href="https://wa.me/6281234567890" target="_blank" style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 20px;
+        z-index: 999;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>

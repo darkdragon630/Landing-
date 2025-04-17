@@ -1,0 +1,139 @@
+
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #ddd;
+    width: 100%;
+}
+
+/* Pastikan footer tetap di bawah */
+.wrapper {
+    flex: 1;
+}
+
+/* Ikon media sosial di footer */
+.footer-icons {
+    margin-top: 8px;
+}
+
+.footer-icons a {
+    color: cyan;
+    margin: 0 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-icons a:hover {
+    color: white;
+    text-shadow: 0 0 10px cyan;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar sticky dan hover */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: #333;
+}
+nav a:hover {
+    color: cyan;
+    text-shadow: 0 0 5px cyan;
+}
+
+/* Tombol CTA */
+.btn-cta {
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border-radius: 8px;
+}
+.btn-cta:hover {
+    background-color: #40916c;
+    transform: scale(1.05);
+}
+
+/* Kartu layanan dan testimoni */
+.card {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsif mobile */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    header, section {
+        padding: 20px 10px;
+    }
+}
+
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+.dark-mode header,
+.dark-mode section,
+.dark-mode footer {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+}
+.dark-mode nav {
+    background-color: #111 !important;
+}
+.dark-mode .card {
+    background-color: #2c2c2c;
+    color: white;
+}
