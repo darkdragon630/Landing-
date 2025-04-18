@@ -31,6 +31,12 @@ footer {
     text-shadow: 0 0 10px cyan;
 }
 
+ /* Media query untuk tampilan di perangkat mobile */
+ @media (max-width: 600px) {
+    header img {
+        max-height: 200px;  /* Menyesuaikan gambar agar lebih kecil di perangkat mobile */
+    }
+}
 
 
 
