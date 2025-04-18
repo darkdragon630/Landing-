@@ -27,19 +27,24 @@
         <img src="A_2D_digital_vector_illustration_serves_as_the_hea.png" alt="Header Image" style="width: 100%; max-height: 300px; height: auto; display: block; object-fit: cover;">
     </header>
 
-    
     <!-- Tombol Mode Gelap -->
     <div style="text-align:right; padding:10px;">
         <button onclick="toggleDarkMode()" class="btn-cta" style="padding: 5px 10px; font-size: 14px;">🌓 Mode</button>
     </div>
 
     <!-- Navigasi -->
-
-    <nav style="background-color: #116193; padding: 10px;">
-        <a href="#home" style="color: white; margin: 0 10px; text-decoration: none;">Beranda</a>
-        <a href="#about" style="color: white; margin: 0 10px; text-decoration: none;">Tentang</a>
-        <a href="#services" style="color: white; margin: 0 10px; text-decoration: none;">Layanan</a>
-        <a href="#contact" style="color: white; margin: 0 10px; text-decoration: none;">Kontak</a>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links" id="navLinks">
+                <a href="#home" style="color: white; margin: 0 10px; text-decoration: none;">Beranda</a>
+                <a href="#about" style="color: white; margin: 0 10px; text-decoration: none;">Tentang</a>
+                <a href="#services" style="color: white; margin: 0 10px; text-decoration: none;">Layanan</a>
+                <a href="#contact" style="color: white; margin: 0 10px; text-decoration: none;">Kontak</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -104,7 +109,7 @@
                 <p><strong>- Burhan, Mahasiswa</strong></p>
             </div>
             <div style="margin: 10px; padding: 20px; border: 1px solid #0f0e0e; width: 190px;">
-                <img src="alif.jpeg" alt="pak alif" width="100%" height="auto">
+                <img src="pak alif.jpeg" alt="pak alif" width="100%" height="auto">
                 <p>"Materinya praktis dan langsung bisa diaplikasikan."</p>
                 <p><strong>- ALIF CATUR MURTIS.KOM.M.KOM, dosen</strong></p>
             </div>
@@ -112,17 +117,15 @@
     </section>
 
     <!-- Kontak -->
-    
-<section id="contact" data-aos="fade-up" style="background-color: #2d6a4f; color: white; padding: 30px 20px; text-align: center;">
-    <h2>Hubungi Kami</h2>
-    <form action="mailto:cerolinestudio@gmail.com" method="POST" enctype="text/plain" style="max-width: 400px; margin: auto;">
-        <input type="text" name="nama" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin: 10px 0;">
-        <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 10px; margin: 10px 0;">
-        <textarea name="pesan" placeholder="Tulis pesan..." required style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
-        <button type="submit" class="btn-cta">Kirim Pesan</button>
-    </form>
-</section>
-
+    <section id="contact" data-aos="fade-up" style="background-color: #14aea9; color: white; padding: 30px 20px; text-align: center;">
+        <h2>Hubungi Kami</h2>
+        <form action="mailto:cerlearn@gmail.com" method="POST" enctype="text/plain" style="max-width: 400px; margin: auto;">
+            <input type="text" name="nama" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin: 10px 0;">
+            <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 10px; margin: 10px 0;">
+            <textarea name="pesan" placeholder="Tulis pesan..." required style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
+            <button type="submit" class="btn-cta">Kirim Pesan</button>
+        </form>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -150,7 +153,20 @@
 
     <script>
       AOS.init();
+      
+      function toggleMenu() {
+          const navLinks = document.querySelector('.nav-links');
+          navLinks.classList.toggle('active');
+      }
+      
+      // Tutup menu saat mengklik link di mobile
+      document.querySelectorAll('.nav-links a').forEach(link => {
+          link.addEventListener('click', () => {
+              if (window.innerWidth <= 768) {
+                  document.querySelector('.nav-links').classList.remove('active');
+              }
+          });
+      });
     </script>
 </body>
-
 </html>
